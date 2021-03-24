@@ -44,33 +44,6 @@ def cluster(data,k=10,iterations=100,epsilon=1):
     return np.array(centroids),id_
 
 
-# In[74]:
-
-
-test = []
-for i in range(200):
-    test.append(rd.choices(range(-100,100),k=2))
-test=np.array(test)
-
-
-# In[75]:
-
-
-x=test[:,0]
-y=test[:,1]
-center,cls=cluster(test,7)
-
-
-# In[78]:
-
-
-color=['cyan','red','pink','green','orange','magenta','yellow','indigo','brown','grey']
-cscheme = [color[i] for i in cls]
-plt.scatter(x,y,color=cscheme)
-plt.scatter(center[:,0],center[:,1],c='black',marker='X')
-
-
-# In[ ]:
 
 
 
